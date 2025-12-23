@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #9d0f0f;
+    padding: 16px 0;
+    
+}
+
+h1{
+    font-family: 'Metal Mania';
+    color: #eee;
+}
+
+li a{
+    font-family: 'Metal Mania';
+    font-size: 24px;
+}
+
+.container{
+    display: flex;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-nav{
+    display: flex;
+    list-style: none;
+}
+
+.barra-nav li{
+    padding: 16px;
+}
+
+.barra-nav li a{
+    text-decoration: none;
+    color: #eee;
+    transition: .5s;
+}
+
+.barra-nav li a:hover{
+    text-decoration: underline;
+}
+
+main{
+    background-color: #1e1e1e;
+    padding: 56px 0;
+}
+
+.sobre-container,
+.produtos-container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: #444;
+    border-radius: 10px;
+}
+
+#sobre{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 12px 0;
+
+}
+
+#sobre img{
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+#sobre h2,
+.produtos-container h2{
+    color: #b01212;
+    margin-bottom: 16px;
+    border-bottom: 4px solid #000;
+    font-family: 'Metal Mania';
+    text-shadow: 3px 3px 4px #000;
+    font-size: 2em;
+}
+
+.produtos-container{
+    margin-top: 32px;
+}
+
+#sobre p{
+    color: #eee;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#produtos{
+    background-color: #444;
+    display: grid;
+    grid-template-columns: repeat(4, 22% );
+    column-gap: 4%;
+    justify-content: center;
+}
+
+.produto img{
+    max-width: 210px;
+}
+
+
+.produto{
+    text-align: center;
+    border: 5px solid #9d0f0f;
+    box-shadow: 3px 3px 4px 0px #000;
+    border-radius: 10px;
+    background-color: #3b3b3b;
+}
+
+.produto img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+h3, .produto p{
+    color: #eee;
+    padding: 5px;
+    
+}
+
+.produto button{
+    padding:8px;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Metal Mania';
+    background-color: #9d0f0f;
+    color: #eee;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 16px;
+    box-shadow: 3px 3px 4px 0 #000;
+    margin-bottom: 16px;
+}
+
+.produto button:hover{
+    background-color: #de2020;
+}
+
+footer{
+    color: #eee;
+    background-color: #9d0f0f;
+    text-align: center;
+    padding: 32px 0;
+    font-weight: bold;
+    
+}
+
+footer a{
+    text-decoration: none;
+    color: #000;
+    transition: .5s;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: #eee;
+}
+
+@media screen and (min-width:641px) and (max-width:1023px){
+    .container{
+        max-width: 700px;
+    }
+    
+    .sobre-container,
+    .produtos-container{
+        max-width: 700px ;
+    }
+
+    .produtos-container{
+        min-height: 1200px;
+    }
+
+    .sobre-container h2,
+    .produtos-container h2{
+        padding-bottom: 16px;
+    }
+    
+    #sobre{
+        display: block;
+    }
+
+    #sobre img{
+        max-width: 100%;
+        padding-bottom: 16px;
+    }
+
+    #produtos{
+        grid-template-columns: repeat(2,45%);
+        column-gap: 5%;
+        row-gap: 5%;
+    }
+
+}
+
+@media screen and (max-width:640px){
+    
+    
+    .container{
+        flex-direction: column;
+    }
+
+    #sobre{
+        display: block;
+    }
+
+    #sobre img{
+        max-width: 100%;
+        padding-bottom: 16px;
+    }
+
+    .sobre-container,
+    .produtos-container{
+        max-width: 310px;
+    }
+
+    #produtos{
+        grid-template-columns: 100%;
+        row-gap: 5%;
+    }
+
+    .produtos-container{
+        min-height: 2200px;
+    }
+
+    footer{
+        font-size: .8em;
+    }
+}
